@@ -57,31 +57,26 @@
             position: relative;
             width: 100%;
             height: 80px;
-            background: #222; /* Fundo cinza escuro elegante caso a imagem demore */
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: #000;
         }
         .thumbnail-wrapper img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
         }
         /* Ícone de play simulado por cima da imagem */
         .play-icon {
-           position: relative;
-            z-index: 2; /* Fica por cima da imagem */
-            width: 32px;
-            height: 32px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 28px;
+            height: 28px;
             background: rgba(0, 0, 0, 0.7);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         .play-icon::after {
             content: '';
@@ -109,48 +104,168 @@
 </head>
 <body>
 
-    <div class="sidebar-title">Vídeo Aulas e Dicas</div>
+    <div class="sidebar-title">Vídeos Recomendados</div>
 
     <div class="video-scroll-container">
         <!-- VÍDEO 1 -->
-        <a href="https://www.youtube.com/watch?v=aahcX7bl3Gs" target="_blank" class="video-card">
+        <a href="https://www.youtube.com/watch?v=ID_DO_VIDEO_1" target="_blank" class="video-card">
             <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/aahcX7bl3Gs/mqdefault.jpg" alt="Vídeo 1">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
+                <img src="https://img.youtube.com/vi/ID_DO_VIDEO_1/hqdefault.jpg" alt="Vídeo 1">
+                <div class="play-icon"></div>
             </div>
             <div class="video-info">
-                <div class="video-title">50 Palavras Iniciais</div>
+                <div class="video-title">Título do Vídeo Um aqui na barra lateral</div>
             </div>
         </a>
 
         <!-- VÍDEO 2 -->
-        <a href="https://www.youtube.com/watch?v=nd_xTQN81Xg" target="_blank" class="video-card">
+        <a href="https://www.youtube.com/watch?v=ID_DO_VIDEO_2" target="_blank" class="video-card">
             <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/nd_xTQN81Xg/mqdefault.jpg" alt="Vídeo 2">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
+                <img src="https://img.youtube.com/vi/ID_DO_VIDEO_2/hqdefault.jpg" alt="Vídeo 2">
+                <div class="play-icon"></div>
             </div>
             <div class="video-info">
-                <div class="video-title">10 frases essenciais</div>
+                <div class="video-title">Título do Vídeo Dois bem legal</div>
             </div>
         </a>
 
         <!-- VÍDEO 3 -->
-       <a href="https://www.youtube.com/watch?v=nd_xTQN81Xg" target="_blank" class="video-card">
+        <a href="<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Barra Lateral de Vídeos</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: transparent; /* Fundo transparente para integrar com o app */
+            padding: 10px;
+        }
+        .sidebar-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        /* Container com rolagem horizontal suave otimizada para toque */
+        .video-scroll-container {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 5px;
+        }
+        /* Esconde a barra de rolagem para ficar visualmente limpo */
+        .video-scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+        .video-scroll-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Estilo de cada card de miniatura */
+        .video-card {
+            flex: 0 0 140px; /* Largura fixa da miniatura na barra */
+            scroll-snap-align: start;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-decoration: none;
+            display: block;
+            transition: transform 0.1s ease;
+        }
+        .video-card:active {
+            transform: scale(0.96);
+        }
+        .thumbnail-wrapper {
+            position: relative;
+            width: 100%;
+            height: 80px;
+            background: #000;
+        }
+        .thumbnail-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Ícone de play simulado por cima da imagem */
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 28px;
+            height: 28px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .play-icon::after {
+            content: '';
+            display: block;
+            margin-left: 2px;
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 10px solid #fff;
+        }
+        .video-info {
+            padding: 6px;
+        }
+        .video-title {
+            font-size: 11px;
+            color: #444;
+            line-height: 1.2;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar-title">Vídeos Recomendados</div>
+
+    <div class="video-scroll-container">
+        <!-- VÍDEO 1 -->
+        <a href="https://www.youtube.com/embed/aahcX7bl3Gs?si=zqihHD0989hEAP6z" target="_blank" class="video-card">
             <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/nd_xTQN81Xg/mqdefault.jpg" alt="Vídeo 2">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
+                <img src="https://img.youtube.com/vi/aahcX7bl3Gs/hqdefault.jpg" alt="Vídeo 1">
+                <div class="play-icon"></div>
+            </div>
+            <div class="video-info">
+                <div class="video-title">50 Palavras</div>
+            </div>
+        </a>
+
+        <!-- VÍDEO 2 -->
+        <a href="https://www.youtube.com/embed/MbyCsd7J6QQ?si=BXPlr4dsra-2-myE" target="_blank" class="video-card">
+            <div class="thumbnail-wrapper">
+                <img src="https://img.youtube.com/vi/MbyCsd7J6QQ/hqdefault.jpg" alt="Vídeo 2">
+                <div class="play-icon"></div>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Frases mais faladas</div>
+            </div>
+        </a>
+
+        <!-- VÍDEO 3 -->
+        <a href="https://www.youtube.com/embed/poNSk5TZ_98?si=hFsJcctyk4jZgdTR" target="_blank" class="video-card">
+            <div class="thumbnail-wrapper">
+                <img src="https://img.youtube.com/vi/poNSk5TZ_98/hqdefault.jpg" alt="Vídeo 3">
+                <div class="play-icon"></div>
             </div>
             <div class="video-info">
                 <div class="video-title">Aula 1</div>
@@ -158,256 +273,38 @@
         </a>
 
         <!-- VÍDEO 4 -->
-        <a href="https://youtu.be/GDHgS8aXCcw?si=jssmYbIkB65EWFK8" target="_blank" class="video-card">
+        <a href="https://www.youtube.com/embed/S8rEMv-xvNU?si=LM_dpPoiW_TjHTmd" target="_blank" class="video-card">
             <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/GDHgS8aXCcw/mqdefault.jpg" alt="Vídeo 4">
+                <img src="https://img.youtube.com/vi/S8rEMv-xvNU/hqdefault.jpg" alt="Vídeo 4">
                 <div class="play-icon"></div>
             </div>
             <div class="video-info">
                 <div class="video-title">Aula 2</div>
             </div>
         </a>
+    </div>
 
-        <!-- VÍDEO 5 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_5" target="_blank" class="video-card">
+     <!-- VÍDEO 5 -->
+        <a href="https://www.youtube.com/embed/IWDjXIefRAg?si=U7WXdDZ0BmgoNyoL" target="_blank" class="video-card">
             <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_5/mqdefault.jpg" alt="Vídeo 5">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
+                <img src="https://img.youtube.com/vi/IWDjXIefRAg/hqdefault.jpg" alt="Vídeo 4">
+                <div class="play-icon"></div>
             </div>
             <div class="video-info">
-                <div class="video-title">Título do Vídeo Cinco</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 6 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_6" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_6/mqdefault.jpg" alt="Vídeo 6">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Seis</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 7 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_7" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_7/mqdefault.jpg" alt="Vídeo 7">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Sete</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 8 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_8" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_8/mqdefault.jpg" alt="Vídeo 8">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Oito</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 9 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_9" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_9/mqdefault.jpg" alt="Vídeo 9">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Nove</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 10 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_10" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_10/mqdefault.jpg" alt="Vídeo 10">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Dez</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 11 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_11" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_11/mqdefault.jpg" alt="Vídeo 11">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Onze</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 12 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_12" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_12/mqdefault.jpg" alt="Vídeo 12">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Doze</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 13 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_13" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_13/mqdefault.jpg" alt="Vídeo 13">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Treze</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 14 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_14" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_14/mqdefault.jpg" alt="Vídeo 14">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Quatorze</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 15 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_15" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_15/mqdefault.jpg" alt="Vídeo 15">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Quinze</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 16 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_16" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_16/mqdefault.jpg" alt="Vídeo 16">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Dezesseis</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 17 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_17" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_17/mqdefault.jpg" alt="Vídeo 17">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Dezessete</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 18 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_18" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_18/mqdefault.jpg" alt="Vídeo 18">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Dezoito</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 19 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_19" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_19/mqdefault.jpg" alt="Vídeo 19">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Dezenove</div>
-            </div>
-        </a>
-
-        <!-- VÍDEO 20 -->
-        <a href="https://www.youtube.com/watch?v=COLOQUE_O_ID_20" target="_blank" class="video-card">
-            <div class="thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/COLOQUE_O_ID_20/mqdefault.jpg" alt="Vídeo 20">
-                <div class="play-icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="video-title">Título do Vídeo Vinte</div>
+                <div class="video-title">Título do Vídeo Quatro no carrossel</div>
             </div>
         </a>
     </div>
+</body>
+</html>" target="_blank" class="video-card">
+            <div class="thumbnail-wrapper">
+                <img src="https://img.youtube.com/vi/ID_DO_VIDEO_3/hqdefault.jpg" alt="Vídeo 3">
+                <div class="play-icon"></div>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Título do Vídeo Três para testar</div>
+            </div>
+        </a>
 
 </body>
 </html>
